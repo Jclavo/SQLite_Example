@@ -12,8 +12,71 @@
     tools:context="com.example.jclavo.sqlite_example.MainActivity"
     tools:showIn="@layout/activity_main">
 
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Product Name"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtProductName"
+        android:layout_alignTop="@+id/textView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="31dp"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Quantity"
+        android:id="@+id/textView2"
+        android:layout_marginTop="34dp"
+        android:layout_below="@+id/txtProductName"
+        android:layout_toStartOf="@+id/txtProductQuantity" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/txtProductQuantity"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_alignStart="@+id/txtProductName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Look Up"
+        android:id="@+id/btnLookUp"
+        android:onClick="lookupProduct"
+        android:layout_alignTop="@+id/btnAdd"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        android:id="@+id/btnAdd"
+        android:layout_marginTop="28dp"
+        android:onClick="addProduct"
+        android:layout_below="@+id/txtProductQuantity"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Delete"
+        android:id="@+id/btnDelete"
+        android:onClick="deleteProduct"
+        android:layout_alignTop="@+id/btnLookUp"
+        android:layout_alignEnd="@+id/txtProductQuantity" />
+
+
 </RelativeLayout>
